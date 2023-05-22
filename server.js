@@ -17,6 +17,10 @@ app.use(express.json());
 app.use(cors());
 // app.use(bodyParser.json());
 
+app.get("/", (req, res) => {
+  res.status(200).send("Welcome to your retail store");
+});
+
 app.post("/send-email", (req, res) => {
   const { name, email, message } = req.body;
 
