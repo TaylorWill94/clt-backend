@@ -11,7 +11,7 @@ const app = express();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(cors());
@@ -20,6 +20,7 @@ app.use(cors());
 app.get("/", (req, res) => {
   res.status(200).send("Welcome");
 });
+ß;
 
 app.post("/send-email", (req, res) => {
   const { name, email, message } = req.body;
@@ -63,6 +64,6 @@ app.post("/send-email", (req, res) => {
   });
 });
 
-app.listen(3001, () => {
+app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
