@@ -20,7 +20,6 @@ app.use(cors());
 app.get("/", (req, res) => {
   res.status(200).send("Welcome");
 });
-ß;
 
 app.post("/send-email", (req, res) => {
   const { name, email, message } = req.body;
