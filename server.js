@@ -18,7 +18,7 @@ app.use(cors());
 // app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-  res.status(200).send("Welcome to your retail store");
+  res.status(200).send("Welcome");
 });
 
 app.post("/send-email", (req, res) => {
